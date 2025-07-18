@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #1F2937;
+  
+  --card: #FFFFFF;
+  --card-foreground: #1F2937;
+ 
+  --popover: #FFFFFF;
+  --popover-foreground: #1F2937;
+ 
+  --primary: #3B82F6;
+  --primary-foreground: #FFFFFF;
+ 
+  --secondary: #F3F4F6;
+  --secondary-foreground: #1F2937;
+ 
+  --muted: #F3F4F6;
+  --muted-foreground: #6B7280;
+ 
+  --accent: #F3F4F6;
+  --accent-foreground: #1F2937;
+ 
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+  --ring: #3B82F6;
+ 
+  --radius: 0.5rem;
+}
+
+.dark {
+  /* Define dark mode colors if needed later */
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.section {
+  @apply py-16 md:py-24;
+}
+
+.section-title {
+  @apply text-center mb-12;
+}
+
+.section-title h2 {
+  @apply text-3xl md:text-4xl font-bold text-text-primary-dark;
+}
+
+.section-title h2 .highlight {
+  @apply text-primary;
+}
+
+.section-title p {
+  @apply mt-4 max-w-2xl mx-auto text-lg text-text-secondary;
+}
+
+.cta-button {
+    @apply inline-block bg-primary text-primary-foreground font-semibold py-3 px-8 rounded-lg transition-all duration-300 ease-in-out;
+    @apply hover:bg-blue-600 hover:shadow-lg transform hover:-translate-y-1;
+}
+
+.input-field {
+    @apply w-full bg-white border-2 border-border text-foreground px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent transition-all;
+}
+
+.input-field::placeholder {
+    @apply text-text-secondary;
+}
